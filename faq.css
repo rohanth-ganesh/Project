@@ -1,0 +1,94 @@
+        /* Styles for the FAQ page content */
+        .faq-content {
+            background-color: rgba(53, 67, 76, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+            color: black;
+            font-family: 'Arial', sans-serif;
+            animation: fadeInContact 1.5s ease-in-out;
+            margin-right: 2%;
+            margin-top: 8%;
+            padding-top: 100px;
+            z-index: 1;
+        }
+
+        .faq-content h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #004d66;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .faq-content h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: underline;
+            color: #003344;
+        }
+
+        .faq-box {
+            margin-bottom: 40px;
+            background-color: rgba(140, 155, 166, 0.637);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .faq-content p {
+            font-size: 24px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* Fade-in animation for FAQ page */
+        @keyframes fadeInContact {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive design for mobile devices */
+        @media (max-width: 600px) {
+            .faq-content {
+                padding: 20px;
+            }
+
+            .faq-content h1 {
+                font-size: 28px;
+            }
+
+            .faq-content h2 {
+                font-size: 22px;
+            }
+        }
+    
+
+/* Style the anchor tag like a button */
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #004d66; /* Button background color */
+    color: white; /* Button text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 25px;
+    text-align: center; /* Center the text */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Add hover effect */
+.button-link:hover {
+    background-color: #006680; /* Button background color on hover */
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ionicons CDN -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Resume Consultancy Services</title>
+    <link rel="stylesheet" href="website.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="logo.png" alt="Logo" class="logo-img">
+            </div>
+            <div class="header-text">
+                <h1>GRA Consultancy Services</h1>
+            </div>
+        </div>
+    </header>
+        <div class="video-bg">
+            <video autoplay muted loop id="background-video">
+                <source src="bg.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    
+        <!-- Transparent content box -->
+        <div class="content-box">
+            <!-- Navigation Bar -->
+            <div class="nav-bar">
+                <div class="nav-item" id="home">
+                    <ion-icon name="home-outline"></ion-icon>
+                    <span class="nav-text">Home</span>
+                </div>
+                <div class="nav-item" id="services">
+                    <ion-icon name="briefcase-outline"></ion-icon>
+                    <span class="nav-text">Services</span>
+                </div>
+                <div class="nav-item" id="about">
+                    <ion-icon name="information-circle-outline"></ion-icon>
+                    <span class="nav-text">About Us</span>
+                </div>
+                <div class="nav-item" id="contact">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <span class="nav-text">Contact Us</span>
+                </div>
+                <div class="nav-item" id="faq">
+                    <ion-icon name="help-circle-outline"></ion-icon>
+                    <span class="nav-text">FAQ</span>
+                
+                
+                    
+               
+                
+            </div>
+        </div>
+
+    <!-- Dynamic Content Area -->
+    <div class="content-boxs">
+        <div class="contents">
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide">
+                        <a href="res_gen.html" target="_blank">
+                            <img src="s1.png" alt="Image 1" title="Built Ats Friendly Resume">
+                        </a>
+                        
+                    </div>
+                    <div class="slide">
+                        <a href="https://yoodli.ai/" target="_blank">
+                            <img src="s2.jpg" alt="Image 2" title="Practice your Interview with live AI">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="https://in.linkedin.com/jobs/assistant-jobs?position=1&pageNum=03" target="_blank">
+                            <img src="s3.jpg" alt="Image 3" title="Career Consultation?">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="quiz.html" target="_blank">
+                            <img src="s4.jpg" alt="Image 4" title="Test Your Knowledge">
+                        </a>
+                    </div>
+                    <!-- Add more slides as needed -->
+            </div>
+           
+            <div class="butt">
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    
+   
+    
+<!-- Image that opens the chatbot popup -->
+ <div class="chat-trigger">
+    <img src="doll.png" alt="Chat with us" id="chatIcon" title="Click to chat with us!">
+</div>
+
+<!-- Chatbot Modal -->
+<div id="chatModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="chat-container">
+            <div class="chatbox" id="chatbox"></div>
+
+           <input type="text" id="userInput" placeholder="Type a message..." />
+    <button onclick="sendMessage()">Send</button>
+    
+    <!-- Suggested Phrases -->
+    <div class="phrase" id="suggestedPhrases">
+      <p>Click on a phrase to send:</p>
+      <button class="btn" onclick="sendPhrase('Hello')">Hello</button>
+      <button class="btn" onclick="sendPhrase('What services do you offer?')">What services do you offer?</button>
+      <button class="btn" onclick="sendPhrase('I need to create an ATS Friendly Resume')">I need to create an ATS Friendly Resume.!</button>
+      <button class="btn" onclick="sendPhrase('I need practice for my Interview')">I need practice for my Interview!</button>
+      <button class="btn" onclick="sendPhrase('How can I contact support?')">How can I contact support?</button>
+      <button class="btn" onclick="sendPhrase('Where can i attempt quiz..?')">Where can i attempt quiz..?</button>
+      <button class="btn" onclick="sendPhrase('Thank you')">Thank you</button>
+      
+        </div>
+    </div>
+</div>
+<script src="bot.js"></script>
+</div>
+<script src="website.js"></script>
+    
+</body>
+</html>
+
+

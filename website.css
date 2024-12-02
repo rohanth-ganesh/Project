@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Chat trigger image positioned at the bottom-right corner */
+.chat-trigger {
+    position: fixed;
+    bottom: 20px; /* Adjust distance from bottom */
+    right: 20px;  /* Adjust distance from right */
+    z-index: 1000; /* Make sure it's above other elements */
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.chat-trigger img {
+    width: 60px; /* Adjust size of the image */
+    height: 60px;
+    cursor: pointer;
+    
+}
+
+.chat-trigger img:hover{
+    transform: scale(1.2) translateY(-5px);
+}
+
+/* Modal (hidden by default) */
+.modal {
+    display: none; /* Hide modal by default */
+    position: fixed;
+    z-index: 1000; /* Make sure it's above other elements */
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 0; /* Start with zero width */
+    opacity: 0; /* Start with invisible */
+    transition: width 0.5s ease, opacity 0.5s ease; /* Smooth width and opacity transitions */
+}
+
+/* Show modal (when triggered) */
+.modal.show {
+    width: 400px; /* Width of the modal */
+    opacity: 1; /* Fully visible */
+    margin: auto;
+    padding: 20px;
+    
+}
+
+/* Modal content styles */
+.modal-content {
+    background-color:  rgba(0, 39, 47, 0.9);
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    color: aliceblue;
+    box-shadow: -10px 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    transform: translateX(100%); /* Start position off-screen */
+    transition: transform 0.5s ease; /* Smooth sliding */
+    margin: auto;
+
+}
+
+.phrase{
+    margin: auto;
+}
+.btn{
+    margin: 10px;
+    background-color: rgb(0, 77, 102,0.75);
+    padding: auto;
+    color: rgb(2, 2, 2);
+    border-radius: 2px;
+    border: #111111;
+}
+
+/* Show modal content (when triggered) */
+.modal.show .modal-content {
+    transform: translateX(0); /* Move into view */
+}
+
+/* Close button styles */
+.close {
+    color: #0b0000;
+    font-size: 28px;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+    margin-left: 10px;
+    
+}
+
+.close:hover, .close:focus {
+    color: rgb(249, 6, 6);
+}
+
+/* Chatbox styles */
+.chat-container {
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    background-color: rgba(8, 3, 0, 0.382);
+    
+}
+
+.chatbox {
+    flex-grow: 1;
+    border: 1px solid #050000;
+    overflow-y:auto;
+    padding: 10px;
+    text-align:justify;
+    line-height: normal;
+
+}
+.chatbox p {
+    margin-bottom: 10px;
+}
+
+input {
+    width:100%;
+    padding: 10px;
+    
+    background-color:  rgb(0, 77, 102,0.25);
+
+}
+
+button {
+    padding: 10px;
+    background-color: rgb(0, 77, 102,0.80);
+    color: white;
+    border: none;
+    border-radius: 2px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(0, 77, 102,0.25);
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-attachment: fixed;
+}.background-video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  #background-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+
+.video-bg {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-box {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.nav-bar {
+    position: fixed;
+    width: 4%;
+    background: rgba(0, 39, 47, 0.9);
+    height: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 94px;
+    
+}
+
+.nav-item {
+    margin: 15px 0;
+    text-align: left;
+    transition: background-color 0.3s ease;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.nav-item ion-icon {
+    font-size: 30px;  /* Adjust the size as needed */
+    color: black; /* Change the color to suit your design */
+    transition:  transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-item .nav-text {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    background-color: rgba(9, 9, 9,0.5);
+    padding: 5px;
+    border-radius: 2px;
+    transition: opacity 0.3s ease;
+    color: rgba(246, 247, 247, 0.75);
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.nav-item:hover ion-icon {
+    transform: scale(1.2) rotate(360deg) translateY(-5px); /* Scale, rotate, and translate */
+    color: rgba(241, 241, 241, 0.953); /* Change color on hover */
+}
+
+.nav-item.active {
+    background-color:rgb(0, 0, 0,0.5); /* Example active state style */
+}
+.nav-item.active ion-icon{
+    color: whitesmoke;
+    transform: rotate(180deg);
+}
+
+/* Content box styling */
+.content-boxs {
+    margin-left: 80px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    
+    text-align: center;
+    }
+
+/* Animation for fade-out effect */
+.contents.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slider {
+    position: relative;
+    max-width: 100%;
+    height: 500px; /* Set a fixed height or use min-height */
+    overflow: hidden;
+    margin: 0 auto; /* Center the slider */
+    margin-top: 150px;
+  }
+  
+  .slides {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent images from wrapping */
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0); /* Initial transform value */
+  }
+  
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .slide img {
+    width: 100%;
+    max-height: 500px;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Scale images correctly */
+    padding: 0; /* Remove padding */
+    margin: 0 auto;
+  }
+  
+  
+  .slide .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 36px;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional background */
+    padding: 10px;
+    display: none; /* Hidden by default */
+}
+
+.slide:hover .text {
+    display: block; /* Display the text on hover */
+    transform: scale(1.2);
+
+}
+.butt button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.butt button:hover{
+    background-color: #111111;
+}
+.butt .prev {
+    left: 10px;
+}
+
+.butt .next {
+    right: 10px;
+}
+/* Header Styles */
+.header {
+    background: rgba(0, 39, 47, 0.9);
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-img {
+    height: 50px; /* Adjust as needed */
+    width: auto;
+    border-radius: 80px;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}

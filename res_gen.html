@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="res_gen.css">
+    <!-- Include jsPDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Include html2canvas Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+    <div class="video-bg">
+        <video autoplay muted loop id="background-video">
+            <source src="bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+<h1>Fill the form & get the <b><u>ATS Friendly</u></b> resume</h1>
+
+<form id="resumeForm">
+    
+    <!-- Personal Information -->
+    <label for="name">Full Name: <span class="required">*</span></label>
+    <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+    <label for="phone">Phone Number:<span class="required">*</label>
+    <input type="text" id="phone" name="phone" placeholder="123-456-7890" required>
+
+    <label for="email">Email:<span class="required">*</label>
+    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+
+    <label for="linkedin">LinkedIn Profile:</label>
+    <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/johndoe" required>
+
+    <label for="location">Location (City, State):</label>
+    <input type="text" id="location" name="location" placeholder="New York, NY" required>
+
+    <!-- Professional Summary -->
+    <label for="summary">Professional Summary:</label>
+    <textarea id="summary" name="summary" placeholder="Enter a brief summary of your professional experience" required></textarea>
+
+    <!-- Professional Experience -->
+    <label for="experience">Professional Experience:</label>
+    <textarea id="experience" name="experience" placeholder="List your job titles, companies, dates, and responsibilities" required></textarea>
+
+    <!-- Education -->
+    <label for="education">Education:</label>
+    <textarea id="education" name="education" placeholder="List your degrees, schools, and graduation dates" required></textarea>
+
+    <!-- Skills -->
+    <label for="skills">Skills:</label>
+    <textarea id="skills" name="skills" placeholder="List relevant technical and soft skills" required></textarea>
+
+    <!-- Languages -->
+    <label for="Languages">Languages:</label>
+    <textarea id="Languages" name="Languages" placeholder="List the Languages you can speak" required></textarea>
+
+    <!-- Certifications -->
+    <label for="certifications">Certifications:</label>
+    <textarea id="certifications" name="certifications" placeholder="List any professional certifications" required></textarea>
+
+    <!-- Submit Button -->
+    <button type="button" id="generateResume">Generate Resume</button>
+</form>
+
+<!-- Output Section -->
+<div id="output"></div>
+
+<!-- Dropdown for file format selection -->
+<select id="fileFormat" class="d">
+    <option value="pdf">PDF</option>
+    <option value="image">Image</option>
+    <option value="text">Text</option>
+</select>
+
+<!-- Download button -->
+<button onclick="downloadResume()">Download Resume</button>
+<button onclick="back()">Back</button>
+
+<!-- Link to External JavaScript -->
+<script src="res_gen.js"></script>
+
+</body>
+</html>
