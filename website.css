@@ -338,6 +338,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-left: 20px;
 }
 
 .logo-img {
@@ -351,4 +352,29 @@ html, body {
     font-size: 24px;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    
+    background-color: rgb(243, 15, 15,0.5);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: rgb(223, 156, 156,0.5);
+    transform: scale(0.5) ; 
+}
+
+.logout-btn ion-icon {
+    margin-right: 8px;
+    font-size: 18px;
 }

@@ -75,3 +75,8 @@ document.addEventListener("DOMContentLoaded", function () {
         showSlide(currentIndex + 1);
     }, 5000);
 });
+function logout() {
+    alert('You have been logged out!');
+    window.location.href = 'index.html';
+    // Additional logout logic can be added here.
+}
