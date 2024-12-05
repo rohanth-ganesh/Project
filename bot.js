@@ -80,7 +80,7 @@ function getBotResponse(userMessage) {
     } else if (messageLower.includes("create")) {
         return "You can create your resume <a href='res_gen.html' onclick='closeModal()'>here</a>.";
     } else if (messageLower.includes("quiz")) {
-        return "You can create your resume <a href='quiz.html' onclick='closeModal()'>here</a>.";
+        return "You can attempt the quiz <a href='quiz.html' onclick='closeModal()'>here</a>.";
     } else {
         return "I'm sorry, I don't understand that. Can you please rephrase?";
     }
